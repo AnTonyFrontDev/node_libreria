@@ -1,12 +1,15 @@
 import { Sequelize} from "sequelize";
+import  connectionStrings  from '../config/config.js';
 
 // const db = new Sequelize('database_app', 'root', '',{
 //     host: 'localhost',
 //     dialect: 'mysql'
 // });
-
-const db = new Sequelize('dblibreria', 'root', 'mysql08102004', {
-    host: 'localhost',
+console.log(connectionStrings)
+const db = new Sequelize(connectionStrings.mysql.database,
+    connectionStrings.mysql.user,
+    connectionStrings.mysql.pass, {
+    host: connectionStrings.mysql.url,
     dialect: 'mysql'/* one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle' */
 });
 
