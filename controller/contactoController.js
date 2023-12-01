@@ -1,5 +1,5 @@
 // Importar modelo
-import ContactoModel from "../models/ContactoModel.js";
+import ContactoModel from "../models/contactoModel.js";
 
 // Métodos para el CRUD de contacto
 
